@@ -1,0 +1,171 @@
+// Toggle del menú hamburguesa
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
+
+// Navegación suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Validación del formulario de reservas
+const reservaForm = document.getElementById('reserva-form');
+
+reservaForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validación básica
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellido = document.getElementById('apellido').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const fecha = document.getElementById('fecha').value;
+    const hora = document.getElementById('hora').value;
+    const personas = document.getElementById('personas').value;
+    
+    let isValid = true;
+    
+    // Validar campos requeridos
+    if (!nombre) {
+        mostrarError('nombre', 'Por favor, ingrese su nombre');
+        isValid = false;
+    } else {
+        removerError('nombre');
+    }
+    
+    if (!apellido) {
+        mostrarError('apellido', 'Por favor, ingrese su apellido');
+        isValid = false;
+    } else {
+        removerError('apellido');
+    }
+    
+    if (!telefono) {
+        mostrarError('telefono', 'Por favor, ingrese su teléfono');
+        isValid = false;
+    } else {
+        removerError('telefono');
+    }
+    
+    if (!fecha) {
+        mostrarError('fecha', 'Por favor, seleccione una fecha');
+        isValid = false;
+    } else {
+        removerError('fecha');
+    }
+    
+    if (!hora) {
+        mostrarError('hora', 'Por favor, seleccione una hora');
+        isValid = false;
+    } else {
+        removerError('hora');
+    }
+    
+    if (!personas) {
+        mostrarError('personas', 'Por favor, seleccione el número de personas');
+        isValid = false;
+    } else {
+        removerError('personas');
+    }
+    
+    // Si el formulario es válido, procesar la reserva
+    if (isValid) {
+        procesarReserva();
+    }
+});
+
+function mostrarError(campoId, mensaje) {
+    const campo = document.getElementById(campoId);
+    campo.style.borderColor = '#ff0000';
+    
+    // Remover mensaje de error existente
+    let errorExistente = campo.parentNode.querySelector('.error-message');
+    if (errorExistente) {
+        errorExistente.remove();
+    }
+    
+    // Crear y mostrar nuevo mensaje de error
+    const errorElement = document.createElement('div');
+    errorElement.className = 'error-message';
+    errorElement.style.color = '#ff0000';
+    errorElement.style.fontSize = '0.8rem';
+    errorElement.style.marginTop = '5px';
+    errorElement.textContent = mensaje;
+    
+    campo.parentNode.appendChild(errorElement);
+}
+
+function removerError(campoId) {
+    const campo = document.getElementById(campoId);
+    campo.style.borderColor = '#ddd';
+    
+    const errorExistente = campo.parentNode.querySelector('.error-message');
+    if (errorExistente) {
+        errorExistente.remove();
+    }
+}
+
+function procesarReserva() {
+    // Aquí iría la lógica para enviar la reserva al servidor
+    // Por ahora, solo mostraremos una alerta
+    
+    const nombre = document.getElementById('nombre').value;
+    const tipoReserva = document.querySelector('input[name="tipo"]:checked').value;
+    
+    alert(`¡Gracias ${nombre}! Su reserva ${tipoReserva.toUpperCase()} ha sido procesada. Nos pondremos en contacto para confirmar.`);
+    
+    // Limpiar formulario
+    reservaForm.reset();
+}
+
+// Efecto de scroll en navbar
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    }
+});
+
+// Manejo de botones "Pedir Ahora"
+document.querySelectorAll('.btn-pedir').forEach(button => {
+    button.addEventListener('click', function() {
+        const plato = this.closest('.plato-card').querySelector('h3').textContent;
+        alert(`¡Excelente elección! Has seleccionado: ${plato}. Será preparado inmediatamente.`);
+    });
+});
+
+// Configuración de fecha mínima para reservas (hoy)
+const fechaInput = document.getElementById('fecha');
+const hoy = new Date().toISOString().split('T')[0];
+fechaInput.min = hoy;
+
+// Inicialización cuando el DOM esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Página del restaurante cargada correctamente');
+});

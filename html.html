@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Español - Sabores Auténticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Sabores Españoles</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#destacados" class="nav-link">Destacados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reservas" class="nav-link">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ubicacion" class="nav-link">Ubicación</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="inicio" class="banner">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h2>Auténtica Cocina Española</h2>
+                <p>Disfruta de los sabores tradicionales en un ambiente acogedor</p>
+                <div class="banner-buttons">
+                    <a href="#menu" class="btn btn-primary">Ver Menú</a>
+                    <a href="#reservas" class="btn btn-secondary">Reservar Mesa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Destacados -->
+    <section id="destacados" class="destacados">
+        <div class="container">
+            <h2 class="section-title">Platos Destacados</h2>
+            <div class="destacados-grid">
+                <div class="plato-card">
+                    <div class="plato-img">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Paella Valenciana">
+                    </div>
+                    <div class="plato-info">
+                        <h3>Paella Valenciana</h3>
+                        <p>Arroz con pollo, conejo, judías verdes y garrofón.</p>
+                        <div class="plato-precio">
+                            <span class="precio">€18.50</span>
+                            <button class="btn-pedir">Pedir Ahora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato-card">
+                    <div class="plato-img">
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Jamón Ibérico">
+                    </div>
+                    <div class="plato-info">
+                        <h3>Jamón Ibérico</h3>
+                        <p>Finas lonchas de jamón ibérico de bellota.</p>
+                        <div class="plato-precio">
+                            <span class="precio">€22.00</span>
+                            <button class="btn-pedir">Pedir Ahora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato-card">
+                    <div class="plato-img">
+                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tortilla Española">
+                    </div>
+                    <div class="plato-info">
+                        <h3>Tortilla Española</h3>
+                        <p>Clásica tortilla de patatas con cebolla.</p>
+                        <div class="plato-precio">
+                            <span class="precio">€8.50</span>
+                            <button class="btn-pedir">Pedir Ahora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato-card">
+                    <div class="plato-img">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Gazpacho Andaluz">
+                    </div>
+                    <div class="plato-info">
+                        <h3>Gazpacho Andaluz</h3>
+                        <p>Sopa fría de tomate, pepino, pimiento y ajo.</p>
+                        <div class="plato-precio">
+                            <span class="precio">€7.00</span>
+                            <button class="btn-pedir">Pedir Ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Menú -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Nuestra Carta</h2>
+            <div class="menu-categorias">
+                <div class="categoria">
+                    <h3>Platos Principales</h3>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Paella Valenciana</div>
+                        <div class="plato-precio">€18.50</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Cocido Madrileño</div>
+                        <div class="plato-precio">€16.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Fabada Asturiana</div>
+                        <div class="plato-precio">€14.50</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Pulpo a la Gallega</div>
+                        <div class="plato-precio">€19.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Cordero Asado</div>
+                        <div class="plato-precio">€22.00</div>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <h3>Tapas</h3>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Jamón Ibérico</div>
+                        <div class="plato-precio">€22.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Tortilla Española</div>
+                        <div class="plato-precio">€8.50</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Croquetas de Jamón</div>
+                        <div class="plato-precio">€7.50</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Patatas Bravas</div>
+                        <div class="plato-precio">€6.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Calamares a la Romana</div>
+                        <div class="plato-precio">€9.50</div>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <h3>Postres</h3>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Flan de Huevo</div>
+                        <div class="plato-precio">€5.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Crema Catalana</div>
+                        <div class="plato-precio">€5.50</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Tarta de Santiago</div>
+                        <div class="plato-precio">€6.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Churros con Chocolate</div>
+                        <div class="plato-precio">€4.50</div>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <h3>Bebidas</h3>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Vino Tinto (copa)</div>
+                        <div class="plato-precio">€4.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Vino Blanco (copa)</div>
+                        <div class="plato-precio">€4.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Cerveza (caña)</div>
+                        <div class="plato-precio">€2.50</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Refrescos</div>
+                        <div class="plato-precio">€2.00</div>
+                    </div>
+                    <div class="plato-item">
+                        <div class="plato-nombre">Agua Mineral</div>
+                        <div class="plato-precio">€1.50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reservas -->
+    <section id="reservas" class="reservas">
+        <div class="container">
+            <h2 class="section-title">Reserva tu Mesa</h2>
+            <form id="reserva-form" class="reserva-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="personas">Número de Personas</label>
+                        <select id="personas" name="personas" required>
+                            <option value="">Seleccione</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                            <option value="5">5 personas</option>
+                            <option value="6">6 personas</option>
+                            <option value="7">7 personas</option>
+                            <option value="8">8 personas</option>
+                            <option value="9">9 personas o más</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Reserva</label>
+                    <div class="radio-group">
+                        <input type="radio" id="normal" name="tipo" value="normal" checked>
+                        <label for="normal">Normal</label>
+                        <input type="radio" id="vip" name="tipo" value="vip">
+                        <label for="vip">VIP</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notas">Notas Adicionales</label>
+                    <textarea id="notas" name="notas" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Reservar Mesa</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección Ubicación y Horarios -->
+    <section id="ubicacion" class="ubicacion">
+        <div class="container">
+            <h2 class="section-title">Ubicación y Horarios</h2>
+            <div class="ubicacion-content">
+                <div class="mapa">
+                    <div class="mapa-placeholder">
+                        <p>Mapa interactivo aquí</p>
+                        <p>Dirección: Calle Principal, 123, Madrid</p>
+                    </div>
+                </div>
+                <div class="info-contacto">
+                    <div class="horarios">
+                        <h3>Horarios de Atención</h3>
+                        <div class="horario-item">
+                            <span class="dia">Lunes - Jueves</span>
+                            <span class="horas">13:00 - 23:00</span>
+                        </div>
+                        <div class="horario-item">
+                            <span class="dia">Viernes - Sábado</span>
+                            <span class="horas">13:00 - 00:00</span>
+                        </div>
+                        <div class="horario-item">
+                            <span class="dia">Domingo</span>
+                            <span class="horas">13:00 - 22:00</span>
+                        </div>
+                    </div>
+                    <div class="contacto">
+                        <h3>Información de Contacto</h3>
+                        <p>Teléfono: +34 912 345 678</p>
+                        <p>Email: info@saboresespanoles.com</p>
+                    </div>
+                    <div class="nota-especial">
+                        <p><strong>Nota:</strong> Los horarios pueden variar en días festivos. Consulte con nosotros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Sabores Españoles</h3>
+                    <p>Auténtica cocina española en el corazón de Madrid. Disfruta de nuestros platos tradicionales preparados con ingredientes de la más alta calidad.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#destacados">Destacados</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#reservas">Reservas</a></li>
+                        <li><a href="#ubicacion">Ubicación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacto">
+                    <h3>Contacto</h3>
+                    <p>Calle Principal, 123</p>
+                    <p>28001 Madrid, España</p>
+                    <p>Tel: +34 912 345 678</p>
+                    <p>Email: info@saboresespanoles.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Sabores Españoles. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/34123456789" class="whatsapp-btn" target="_blank">
+        <span>WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
